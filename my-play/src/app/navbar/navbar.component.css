@@ -1,21 +1,98 @@
-*{
-    list-style: none;
-    text-decoration: none;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand:wght@500;600;700&family=Roboto&display=swap');
+
+
+
+
+/* colors */
+:root{
+    --first-color: #12192C;
+    --second-solor: #F5A623;
+    --white-color: #EDEDED;
+}
+
+:root{
+    --body-font: 'Quicksand', sans-serif;
+    --small-font-size: 0.875rem;
+
+    @media screen (min- width: 768px){
+        --small-font-size : 0.938rem;
+
+    }        
+    
+}
+/* z index */
+:root{
+    --z-back:-10;
+    --z-normal: 1;
+    --z-tooltip:10;
+    --z-fixed:100;
+    --z-modal:1000;
+}
+
+*,::before, ::after{
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    margin:0;
+    padding: 1rem 0 0  5rem;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #EDEDED;
+    transition: .5;
+}
+h1{
+    margin: 0;
+}
+ul, li{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    list-style: none;
 }
-body{
-    background: #f5f6fa;
+a{
+    text-decoration: none;
 }
-.wrapper .sidebar{
-    background: rgb(5, 68, 104);
+
+.I-navbar{
     position: fixed;
     top: 0;
     left: 0;
-    width: 225px;
-    height: 100%;
-    padding: 20px 0;
-    transition: all 0.5s ease;
+    width: 178px;
+    height: 100vh;
+    background-color: #12192C;
+    padding: 1.25rem .5rem 2rem;
+    z-index: 100;
 }
+.nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    overflow: hidden;
+}
+.nav .text{
+    color:#EDEDED;
+    font-weight: 140;
+}
+
+
+.nav .toggle{
+    margin-right: 1.2rem;
+    top: 1.10rem;
+    right: -.6rem;
+    width: 18px;
+    height: 18px;
+    background-color: #F5A623;
+    border-bottom: 50%;
+    font-size: 1.2rem;
+    color: #12192C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 1s;
+
+}
+
+
+
